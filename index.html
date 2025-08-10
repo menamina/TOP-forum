@@ -27,26 +27,37 @@
                 <form action="" method="post">
 
                     <section class="formSide1">
-                    <label for="firstName">FIRST NAME</label>
-                    <input>
+                    <div>
+                    <label for="firstName">FIRST NAME</label><br>
+                    <input name="firstName" required>
+                    </div>
 
-                    <label for="email">EMAIL</label>
-                    <input type="email">
+                    <div>
+                    <label for="email">EMAIL</label><br>
+                    <input type="email" name="email" required>
+                    </div>
 
-
-                    <label for="password">PASSWORD</label>
-                    <input type="password">
+                    <div>
+                    <label for="password">PASSWORD</label><br>
+                    <input type="password" name="password" required>
+                    </div>
                     </section>
 
                     <section class="formSide2">
-                    <label for="lastName">LAST NAME</label>
-                    <input type="text">
+                    <div>
+                    <label for="lastName">LAST NAME</label><br>
+                    <input type="text" name="lastName" required>
+                    </div>  
                     
-                    <label for="phone">PHONE NUMBER</label>
-                    <input type="tel">
+                    <div>
+                    <label for="tel">PHONE NUMBER</label><br>
+                    <input type="tel" name="tel">
+                    </div>
 
-                    <label for="confirmPassword">CONFIRM PASSWORD</label>
-                    <input type="text">
+                    <div>
+                    <label for="confirmPassword">CONFIRM PASSWORD</label><br>
+                    <input type="text" name="confirmPassword" required>
+                    </div>
                     </section>
                     
                 </form>

@@ -7,7 +7,9 @@ body {
 #main,
 .left,
 .right,
-form {
+form,
+.formSide1,
+.formSide2 {
     display: flex;
 }
 
@@ -25,13 +27,16 @@ form {
 .right {
     flex-direction: column;
     justify-content: center;
-    flex: 0 0 60%;
+    width: 60%;
+    height: 100%;
 }
 
 
 .right > div {
     height: 100%;
     max-height: 100%;
+    display: flex;
+    flex: 1 1 0;
 }
 
 
@@ -42,25 +47,103 @@ form {
 
 .rChild2 {
   box-shadow: 0 8px 6px -5px rgba(172, 168, 168, 0.5);
+  flex-direction: column;
 }
-
-
 
 p {
     width: 52rem;
-    padding: 8rem 0rem 2.5rem 3rem;
-}
-
-
-form > section {
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    margin: 2rem;
-    
+    padding: 8rem 0rem .5rem 3rem;
 }
 
 .doThis {
     font-size: 2rem;
-    margin: 2rem;
+    margin: 3rem;
+}
+
+.formSide1,
+.formSide2 {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-bottom: 3rem;
+    gap: 2rem;
+}
+
+form {
+    height: 70%;
+    width: 100%;
+    align-self: flex-end;
+}
+
+input {
+    width: 15rem;
+    height: 1.5rem;
+    border-radius: .3rem;
+}
+
+
+.rChild3 {
+    flex-direction: column;
+    margin: 3rem;
+
+}
+
+
+.createAcc {
+    height: 30px;
+    width: 180px;
+    color: white;
+    background-color: rgb(138, 195, 233);
+    border-style: none;
+    border-radius: .5rem;
+}
+
+
+[name^="fi"]:valid {
+    border-color: black;
+}
+
+[name^="fi"]:invalid {
+    border-color: black;
+}
+
+[name="email"]:valid {
+    border-color: black;
+}
+
+[name="email"]:invalid {
+    border-color: black;
+}
+
+[name^="la"]:valid {
+    border-color: black;
+}
+
+[name^="la"]:invalid {
+    border-color: black;
+}
+
+[name^="t"]:valid {
+    border-color: black;
+}
+
+[name^="t"]:invalid {
+    border-color: black;
+}
+
+[name^="pass"]:valid {
+    border-color: black;
+}
+
+[name^="pass"]:invalid {
+}
+
+[name$="rd"]:valid {
+    border-color: black;
+}
+
+[name$="rd"]:invalid {
+    border-color: black;
 }
