@@ -4,6 +4,10 @@ body {
     box-sizing: border-box;
 }
 
+:root {
+    --invalid: rgb(225, 146, 146);
+}
+
 #main,
 .left,
 .right,
@@ -13,20 +17,16 @@ form,
     display: flex;
 }
 
-#main {
-    height: 100vh;
-    width: 100vw;
-}
 
 .left {
     background-image: url('saturn.webp');
     background-position: -34rem;
+    background-size: cover;
     flex: 0 0 40%;
 }
 
 .right {
     flex-direction: column;
-    justify-content: center;
     width: 60%;
     height: 100%;
 }
@@ -51,7 +51,8 @@ form,
 }
 
 p {
-    width: 52rem;
+    max-width: 90vw;
+    width: 100%;
     padding: 8rem 0rem .5rem 3rem;
 }
 
@@ -60,6 +61,11 @@ p {
     margin: 3rem;
 }
 
+.formWrapper {
+    display: flex;
+    flex: 1; 
+    gap: 2rem;   
+}
 .formSide1,
 .formSide2 {
     flex-direction: column;
@@ -69,9 +75,11 @@ p {
     margin-right: 3rem;
     margin-bottom: 3rem;
     gap: 2rem;
+    flex: 1;
 }
 
 form {
+    flex-direction: column;
     height: 70%;
     width: 100%;
     align-self: flex-end;
@@ -81,69 +89,53 @@ input {
     width: 15rem;
     height: 1.5rem;
     border-radius: .3rem;
+    border: 1px solid gray;
+    outline: none;
 }
 
 
 .rChild3 {
     flex-direction: column;
     margin: 3rem;
+    padding-bottom: 10rem;
+    gap: 2rem;
 
 }
 
-
 .createAcc {
-    height: 30px;
-    width: 180px;
+    height: 3rem;
+    width: 20rem;
     color: white;
     background-color: rgb(138, 195, 233);
     border-style: none;
     border-radius: .5rem;
+    font-size: 2rem;
+}
+
+a:link {
+    color: rgb(138, 195, 233);
+}
+
+a:visited {
+    color: rgb(4, 4, 71);
+}
+
+button {
+    cursor: pointer;
+}
+
+[name^="fi"]:focus,
+[name="email"]:focus,
+[name^="la"]:focus,
+[name^="t"]:focus,
+[name^="pass"]:focus,
+[name$="rd"]:focus {
+    border-color: rgb(114, 167, 235);
+    box-shadow: 0 4px 6px -2px rgba(72, 73, 73, 0.7);
 }
 
 
-[name^="fi"]:valid {
-    border-color: black;
-}
-
-[name^="fi"]:invalid {
-    border-color: black;
-}
-
-[name="email"]:valid {
-    border-color: black;
-}
-
-[name="email"]:invalid {
-    border-color: black;
-}
-
-[name^="la"]:valid {
-    border-color: black;
-}
-
-[name^="la"]:invalid {
-    border-color: black;
-}
-
-[name^="t"]:valid {
-    border-color: black;
-}
-
-[name^="t"]:invalid {
-    border-color: black;
-}
-
-[name^="pass"]:valid {
-    border-color: black;
-}
-
-[name^="pass"]:invalid {
-}
-
-[name$="rd"]:valid {
-    border-color: black;
-}
-
-[name$="rd"]:invalid {
-    border-color: black;
+[name^="pass"]:invalid:focus,
+[name$="rd"]:invalid:focus {
+    border-color: var(--invalid);
 }
